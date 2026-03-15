@@ -1,0 +1,52 @@
+{
+  "type": "record",
+  "name": "ReservaCreada",
+  "namespace": "org.yasmani.avro.reserva.v1",
+  "doc": "Evento emitido cuando se crea una reserva",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": "string",
+      "doc": "Identificador único del evento"
+    },
+    {
+      "name": "reservationId",
+      "type": "string",
+      "doc": "Identificador de la reserva"
+    },
+    {
+      "name": "clienteId",
+      "type": "string",
+      "doc": "Identificador del cliente"
+    },
+    {
+      "name": "fechaReserva",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "Fecha de creación de la reserva"
+    },
+    {
+      "name": "estado",
+      "type": {
+        "type": "enum",
+        "name": "EstadoReserva",
+        "symbols": ["CREADA"]
+      },
+      "default": "CREADA"
+    },
+    {
+      "name": "metadata",
+      "type": [
+        "null",
+        {
+          "type": "map",
+          "values": "string"
+        }
+      ],
+      "default": null,
+      "doc": "Metadatos adicionales del evento"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "type": "record",
+  "name": "ReservaConfirmada",
+  "namespace": "org.yasmani.avro.reserva.v1",
+  "doc": "Evento emitido cuando una reserva es confirmada",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": "string",
+      "doc": "Identificador único del evento"
+    },
+    {
+      "name": "reservationId",
+      "type": "string",
+      "doc": "Identificador de la reserva"
+    },
+    {
+      "name": "fechaConfirmacion",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "Fecha de confirmación de la reserva"
+    },
+    {
+      "name": "canalConfirmacion",
+      "type": {
+        "type": "enum",
+        "name": "CanalConfirmacion",
+        "symbols": ["WEB", "MOBILE", "CALL_CENTER"]
+      },
+      "doc": "Canal por el cual se confirmó la reserva"
+    },
+    {
+      "name": "metadata",
+      "type": [
+        "null",
+        {
+          "type": "map",
+          "values": "string"
+        }
+      ],
+      "default": null
+    }
+  ]
+}
