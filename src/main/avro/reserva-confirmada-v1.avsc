@@ -16,11 +16,8 @@
     },
     {
       "name": "fechaConfirmacion",
-      "type": {
-        "type": "long",
-        "logicalType": "timestamp-millis"
-      },
-      "doc": "Fecha de confirmación de la reserva"
+      "type":  "long",
+      "doc": "Fecha de confirmación de la reserva.0.."
     },
     {
       "name": "canalConfirmacion",

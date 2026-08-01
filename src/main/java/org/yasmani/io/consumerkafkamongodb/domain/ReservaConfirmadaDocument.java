@@ -14,7 +14,7 @@ public class ReservaConfirmadaDocument {
     @Id
     private String eventId;
     private String reservationId;
-    private Instant fechaConfirmacion;
+    private Long fechaConfirmacion;
     private String canalConfirmacion;
     private Map<String, String> metadata;
 }
