@@ -16,15 +16,13 @@
     },
     {
       "name": "clienteId",
-      "type": "string",
+      "type": "int",
       "doc": "Identificador del cliente"
     },
     {
       "name": "fechaReserva",
-      "type": {
-        "type": "long",
-        "logicalType": "timestamp-millis"
-      },
+      "type": "long",
+
       "doc": "Fecha de creación de la reserva"
     },
     {

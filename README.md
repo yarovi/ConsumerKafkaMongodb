@@ -44,9 +44,6 @@ kafka-avro-console-producer \
 
 # before type:
 {"eventId": "evt-1","reservationId": "res-100","fechaConfirmacion": 1710086400000,"canalConfirmacion": "WEB","metadata": null }
-{"eventId": "evt-1","reservationId": "res-100","fechaConfirmacion":"2024-03-10T10:00:00Z","canalConfirmacion": "WEB","metadata": null }
-
-{"eventId":"evt-123e4567-e89b-12d3-a456-426614174000","reservationId":"res-789abc123def456","clienteId":"cli-987xyz654uvw321","fechaReserva":1733000000000,"estado":"CREADA","metadata":{"canal":"web","version":"1.0","origen":"api-gateway"}}
 # Value Schema
 
 {
@@ -86,3 +83,6 @@ kafka-avro-console-producer \
 "estado": "CREADA",
 "metadata": null
 }
+
+## Generate Message 
+curl -x POST http://localhost:8083/api/reservas/confirmar

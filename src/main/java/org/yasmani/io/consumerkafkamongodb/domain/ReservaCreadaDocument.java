@@ -13,8 +13,8 @@ public class ReservaCreadaDocument {
     @Id
     private String eventId;
     private String reservationId;
-    private String clienteId;
-    private Instant fechaReserva;
+    private int clienteId;
+    private Long fechaReserva;
     private String estado;
     private Map<String, String> metadata;
 }
