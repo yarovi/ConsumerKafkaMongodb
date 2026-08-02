@@ -86,3 +86,5 @@ kafka-avro-console-producer \
 
 ## Generate Message 
 curl -x POST http://localhost:8083/api/reservas/confirmar
+
+curl -x POST http://localhost:8083/api/reservas/solicitar
